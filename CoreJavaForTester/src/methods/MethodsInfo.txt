@@ -1,0 +1,233 @@
+
+🔹 What is a Method in Java?
+
+Definition:
+A method in Java is a block of code that performs a specific task. It helps break a program into smaller, manageable parts and promotes code reusability.
+
+✅ Benefits of Using Methods:
+- Code Reusability: Write once, use many times.
+- Modularity: Breaks complex programs into smaller parts.
+- Ease of Maintenance: Makes code easier to test and maintain.
+- Avoids Redundancy: Prevents code duplication.
+
+---
+
+🔸 Types of Methods in Java
+
+Java methods are classified into two broad types:
+
+1. Predefined Methods
+- Also called built-in methods
+- Provided by Java libraries (like System.out.println(), Math.sqrt())
+- Developers can use them without defining
+
+Example:
+System.out.println("Hello");
+int result = Math.max(10, 20);
+
+2. User-Defined Methods
+- Created by programmers for specific tasks
+- Gives full control over method behavior
+
+Example:
+void greetUser() {
+    System.out.println("Welcome!");
+}
+
+---
+
+🔸 Method Signature
+
+A method declaration in Java has:
+modifier returnType methodName(parameterList) {
+    // body
+}
+
+Breakdown:
+- modifier: access level (e.g., public, private)
+- returnType: data type of result (e.g., int, void)
+- methodName: name to identify the method
+- parameterList: input variables (can be empty)
+
+---
+
+🔹 1. Simple Method
+
+Definition: A method that does not take any input (no parameters) and does not return any value.
+
+Syntax:
+void methodName() {
+    // statements
+}
+
+Key Points:
+- void means no return type.
+- No arguments.
+- Used for displaying messages or performing fixed actions.
+
+Use Cases:
+- Print welcome message
+- Display static UI elements
+
+---
+
+🔹 2. Method with Arguments (No Return Type)
+
+Definition: A method that accepts parameters (input) but does not return any value.
+
+Syntax:
+void methodName(dataType param1, dataType param2) {
+    // statements using param1, param2
+}
+
+Key Points:
+- Arguments are passed during the method call.
+- Still uses void as return type.
+- Performs action based on input.
+
+Use Cases:
+- Print customized messages
+- Set user profile information
+
+---
+
+🔹 3. Method with Arguments and Return Type
+
+Definition: A method that accepts arguments and returns a result.
+
+Syntax:
+returnType methodName(dataType param1, dataType param2) {
+    // logic
+    return result;
+}
+
+Key Points:
+- returnType could be int, String, boolean, etc.
+- Uses return keyword to return result.
+- Suitable for logic-based operations.
+
+Use Cases:
+- Add two numbers and return result
+- Calculate tax, discounts, validations
+
+---
+
+🔹 Static vs. Non-Static Methods
+
+Static Methods
+- Belong to the class, not instances (objects)
+- Can be called directly using class name
+- Can't access instance variables/methods directly
+- Commonly used for utility or helper methods
+
+Syntax:
+public static void display() {
+    // static code
+}
+Call:
+ClassName.display();
+
+Non-Static Methods
+- Belong to instances (objects) of a class
+- Can access instance variables and other non-static methods
+- Require object creation to invoke
+
+Syntax:
+public void show() {
+    // instance code
+}
+Call:
+ClassName obj = new ClassName();
+obj.show();
+
+---
+
+🔸 Method Overloading
+
+Definition: Multiple methods with the same name but different parameters (type, number, or order).
+
+Key Points:
+- Happens within the same class
+- Improves code readability
+- Based on compile-time (static) polymorphism
+
+Example:
+void display() {
+    System.out.println("No parameter");
+}
+
+void display(String name) {
+    System.out.println("Name: " + name);
+}
+
+int display(int a, int b) {
+    return a + b;
+}
+
+---
+
+🔸 Recursive Methods
+
+Definition: A method that calls itself to solve a problem in smaller sub-problems.
+
+Key Points:
+- Must include a base condition to stop recursion
+- Useful for factorial, Fibonacci, etc.
+
+Example:
+int factorial(int n) {
+    if(n == 0) return 1;
+    else return n * factorial(n - 1);
+}
+
+---
+
+🔸 Access Modifiers with Methods
+
+1. public – Accessible from anywhere
+public void show() {}
+
+2. private – Accessible only within the class
+private void calculate() {}
+
+3. protected – Accessible within same package or subclasses
+protected void draw() {}
+
+4. default (no modifier) – Accessible only within the same package
+void log() {}
+
+---
+
+📊 Comparison Table
+
+Feature        | Simple Method | With Arguments | With Arguments & Return | Static Method | Non-Static Method | Overloading | Recursion
+-------------- | ------------- | -------------- | ----------------------- | ------------- | ------------------ | ----------- | ---------
+Takes Input    | No            | Yes            | Yes                     | Optional      | Optional           | Yes         | Yes
+Returns Output | No            | No             | Yes                     | Optional      | Optional           | Varies      | Yes
+Access         | Class-level   | Varies         | Varies                  | Class         | Object             | Class       | Class
+Needs Object?  | No            | Depends        | Depends                 | No            | Yes                | No          | Depends
+
+---
+
+🔺 Visual Diagram
+
++----------------+          +-------------------------------+          +-------------------------------+
+| Simple Method  |  ----->  | Method with Arguments         |  ----->  | Method with Args + Return     |
+|                |          | (Takes input, no return)      |          | (Takes input, returns value)  |
++----------------+          +-------------------------------+          +-------------------------------+
+                               |
+                               v
+                      +-------------------+       +---------------------+
+                      | Static Method     | <---> | Non-Static Method   |
+                      +-------------------+       +---------------------+
+                               |
+              +------------------------+------------------------+
+              |                                                 |
+    +-----------------------+                     +-------------------------+
+    | Method Overloading    |                     | Recursive Method        |
+    +-----------------------+                     +-------------------------+
+
+---
+
+Prepared By: Jay Zala
+Topic: Java Basics – Methods Overview

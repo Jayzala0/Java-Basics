@@ -1,0 +1,24 @@
+1. Global variables and methods can be either static or non-static.
+2. The concept of static and non-static is not applicable to local variables.
+3. If the `static` keyword is used with a global variable or method, it becomes static.
+4. If the `static` keyword is not used with a global variable or method, it is non-static by default.
+
+
+1. If you want to call a static method, you can call it using the class name followed by the method name:
+  			Syntax : ClassName.methodName();
+
+2. If you want to access a static global variable, you can also access it using the class name followed by the variable name:
+  			Syntax : ClassName.globalVariableName;
+
+
+1. If you want to call a non-static method, you need to create an object of the class and then call the method using the object reference:
+  			Syntax :  objectName.methodName();
+
+2. Similarly, if you want to access a global non-static variable, you must create an object of the class and use the object to access the variable:
+  			Syntax :  objectName.globalVariableName;
+
+Four Questions for method name 
+1. Class name ?
+2. is Static or Non Static ?
+3. Arguments of methods ?
+4. is method rerurning anything ?
