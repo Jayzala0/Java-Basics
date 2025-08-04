@@ -1,4 +1,4 @@
-package trstcases;
+package testcase;
 
 public class HandleException {
 
