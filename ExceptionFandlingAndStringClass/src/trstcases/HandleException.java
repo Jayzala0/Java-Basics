@@ -16,7 +16,7 @@ public class HandleException {
 		try
 		{
 			int count = 10/2;
-			System.err.println(count);
+			System.out.println(count);
 		}
 		catch(Exception e)
 		{
