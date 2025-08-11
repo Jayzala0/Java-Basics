@@ -4,8 +4,9 @@ public class ObjectArray {
 
 	public static void main(String[] args) {
 	
-	int v[] = {100,200,300,400,500};
+	int[] v = {100,200,300,400,500};
 	String s[] = {"Jay","Ajay","Vijay"};
+	
 	//System.out.println(v[2]);
 	
 	// Check length of array 

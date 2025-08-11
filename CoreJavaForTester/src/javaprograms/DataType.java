@@ -11,6 +11,7 @@ public class DataType {
 		double d = 1000.20;
 		boolean b = true; // or false
 		String str = "Welcome To Unicode Technologies Pvt Ltd";
+	
 		
 		//System.out.println("100");
 		System.out.println(val);   //100 will print

@@ -9,7 +9,7 @@ public class Print10to1UsingWhileLoop {
 		while(v>=1)
 		{
 			System.out.println(v);
-			v--;
+			// v--;
 		}
 	}
 
