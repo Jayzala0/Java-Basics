@@ -10,7 +10,7 @@ public class Executation {
 		
 		
 		ReadData r1 = new ReadData();
-		
+		r1.getDetails();
 	}
 
 }
